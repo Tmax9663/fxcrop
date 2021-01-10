@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+    <link rel="shortcut icon" href="mylogo.png">  
+    <link rel="stylesheet" href="w3.css">
+    <title>Auto Cropping</title> 
+  </head>
+  <body>
+    <div class="w3-top w3-bar w3-teal w3-center" style="height:40px; font-size: 24px;">
+      <span id="title">Auto Cropping</span>
+    </div> 
+    <div class="w3-container " style="margin-top: 50px;">                  
+      <div class="w3-row-padding" >
+        <div class="w3-col l12  ">
+          <input class="w3-blue w3-round w3-large" type="file" name="file" id="file1"  style="color: #fff; ">
+          <br>
+        </div>
+        <div style="display: block;margin-top: 50px" >                 
+          <button id="btnCrop" class="w3-button  w3-green w3-round" title="AutoCrop Image" disabled="true">
+            Auto Crop
+          </button>
+          <label for="checkCoordinate">x,y Coordinate
+          <input type="checkbox" id="checkCoordinate" ></label>
+          <label for ="checkUnsharpMask">UnsharpMask
+          <input type="checkbox" id="checkUnsharpMask" ></label>
+          <br>
+        </div>
+      </div>   
+      <div class="w3-row-padding" >
+        <div class="w3-col l12  ">
+          Original Image<br>
+          <div style="border:10px solid #fcc; padding: 10px; margin-top: 5px;display:inline-block;" > 
+            <img src="book_e.jpg" id="imgAdjust" style="display: none"  >
+          </div>
+        </div>
+        <br>
+        <div class="w3-col l12 container">
+          Corner Detect Image<br>
+          <div style="border:10px solid #fcc; padding: 10px; margin-top: 5px;display:inline-block;" > 
+            <canvas id="canvasMain" width="320" height="240" ></canvas>
+          </div>
+        </div>
+        <br>
+        <div class="w3-col l12 container">
+          Crop Images<br>
+          <div style="border:10px solid #fcc; padding: 10px; margin-top: 5px;display:inline-block;" >
+            <canvas id="canvasCrop" width="320" height="240" ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>         
+    <script src="jsfeat-min.js"></script>
+    <script src="detectCorner.min.js"></script>
+    <script src="apps.js"></script>
+    <script src="glfx.min.js"></script>
+    <script src="canny.min.js"></script>
+  </body>
+</html>
